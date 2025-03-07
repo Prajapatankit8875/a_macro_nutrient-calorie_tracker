@@ -1,0 +1,19 @@
+<html>
+<head>
+  
+</head>
+<body>
+    <form method="POST">
+        {% csrf_token %}
+        <select name="Food_consumed", id="Food_consumed">
+            {% for food in foods %}
+            <option value="{{food.name}}">{{food.name}}</option> 
+            {% endfor %}
+        </select>
+        <button type="Submit">Add</button>
+    </form>
+    
+
+
+</body>
+</html>
